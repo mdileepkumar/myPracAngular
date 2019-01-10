@@ -1,0 +1,55 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Screen Name
+      </mat-panel-title>
+      <!-- <mat-panel-description>
+        Type your name and age
+      </mat-panel-description> -->
+    </mat-expansion-panel-header>
+
+    <!-- <mat-form-field>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:yellow;">50%</div>
+            <div class="col-sm-6" style="background-color:orange;">50%</div>
+          </div>
+        <div><label>label 1</label></div>
+        <div><label>label 2</label></div>
+        <div><label>label 3</label></div>
+      <input matInput placeholder="First name">
+    </mat-form-field> -->
+
+    <label>Country</label>
+    <div  title="Please select the country that the customer will primarily be served from">
+        <select class="select_menu custom-select" placeholder="Phantasyland" (change)="changeCountry($event.target.value)">
+            <option *ngFor ="let count of countryList">{{count.name}} </option>
+        </select>
+    </div>
+    
+    
+    <label>City</label>
+    <div title="Please select the city that the customer is primarily to be served from.">
+        <select class="select_menu custom-select" placeholder="Anycity">
+            <option *ngFor ="let city of cities">{{city}} </option>
+      </select>
+    </div>
+
+
+    <!-- <mat-form-field>
+      <input matInput placeholder="Age">
+    </mat-form-field> -->
+  </mat-expansion-panel>
+  <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel> -->
+</mat-accordion>
